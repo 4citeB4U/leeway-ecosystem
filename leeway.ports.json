@@ -1,0 +1,74 @@
+{
+  "portRange": {
+    "start": 7600,
+    "end": 7699,
+    "description": "Reserved port range for LeeWay self-hosted ecosystem"
+  },
+  "services": {
+    "Agent-Lee-Motherboard": {
+      "port": 7601,
+      "description": "Main control hub and motherboard interface",
+      "type": "node",
+      "priority": 1
+    },
+    "leeway-employment-center": {
+      "port": 7602,
+      "description": "AI-driven recruitment and role design system",
+      "type": "npm",
+      "priority": 2
+    },
+    "leeway-learning-platform": {
+      "port": 7603,
+      "description": "Learning management and education platform",
+      "type": "npm",
+      "priority": 3
+    },
+    "LeeWay-Edge-RTC": {
+      "port": 7604,
+      "description": "Real-time communication and WebRTC operations",
+      "type": "npm",
+      "priority": 4
+    },
+    "LeeWay-Edge-GPU": {
+      "port": 7605,
+      "description": "GPU/compute service with fallback mode",
+      "type": "npm",
+      "priority": 5,
+      "gpu": true,
+      "fallback_mode": "CPU_ONLY"
+    },
+    "LeeWay-Edge-DEVICE": {
+      "port": 7606,
+      "description": "Edge device management service",
+      "type": "npm",
+      "priority": 6
+    },
+    "LeeWay-Edge-IOT": {
+      "port": 7607,
+      "description": "IoT integration and device connectivity",
+      "type": "npm",
+      "priority": 7
+    },
+    "LeeWay-Standards": {
+      "port": 7608,
+      "description": "Governance and standards validation tooling",
+      "type": "npm",
+      "priority": 8,
+      "optional": true
+    }
+  },
+  "configuration": {
+    "baseUrl": "http://localhost",
+    "environment": "self-hosted-local",
+    "requireAuth": false,
+    "corsEnabled": true,
+    "healthCheckInterval": 30000,
+    "gracefulShutdownTimeout": 10000
+  },
+  "governance": {
+    "managed": true,
+    "project": "leeway-full-ecosystem",
+    "region": "INFRA.PORTS.CONFIG",
+    "tag": "INFRA.PORTS.RESERVED"
+  }
+}

@@ -1,0 +1,17 @@
+node_modules/
+dist/
+logs/
+.env
+*.log
+build/
+*.tmp
+.git/
+.DS_Store
+.vscode/
+.idea/
+LeeWay-Edge-RTC/runtime/voices/
+LeeWay-Edge-GPU/runtime/
+*.gguf
+*.bin
+_quarantine/
+_recovery_backups/
